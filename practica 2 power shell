@@ -1,0 +1,8 @@
+#@ -0,0 +1,7 @@
+#include <stdio, ih>
+
+int main [int numero de argumentos, char ** valores de los argumentos)
+(imprimir ("hola_mundo" a / n ");
+para (int | 1; i <numero_de_los_argumentos; i ++} (
+   printf ("Xs \ n", valores fe los argumentos [i]};)
+devolver un
