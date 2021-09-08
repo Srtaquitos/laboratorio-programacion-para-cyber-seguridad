@@ -1,0 +1,15 @@
+#! / bin / bash
+	para  archivo  en  $ ( ls ) ;
+	hacer
+	  si [[ -d  $ archivo ]] ;
+	  luego
+	    echo directorio: $ archivo
+	  demás
+	    si [[ -x  $ archivo ]] ;
+	    luego
+	      echo archivo ejecutable: $ archivo
+	    demás
+	      echo archivo no ejecutable: $ archivo
+	    fi
+	  fi
+	hecho
