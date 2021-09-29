@@ -9,7 +9,7 @@ def get_soup(url: str) -> BeautifulSoup:
 
 
 def wiki():
-    soup = get_soup("https://en.wikipedia.org/wiki/List_of_states_of_Mexico")
+    soup = get_soup ("https://es.wikipedia.org/wiki/Chich%C3%A9n_Itz%C3%A1")
     rows = soup.find_all("table")[0].find_all("tr")
     for row in rows:
         columns = row.find_all("td")
@@ -19,7 +19,7 @@ def wiki():
 
 def google_images():
     soup = get_soup(
-        "https://www.google.com/search?q=perros&sxsrf=ALeKk02jGsCChitxcd1n9i8fZNIA8H2y0A:1602915634703&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiwoIuI_rrsAhUKCKwKHYTdBI4Q_AUoAXoECAQQAw&biw=1280&bih=662"
+        "https://www.google.com/search?q=patos&sxsrf=AOaemvIGwtQl8IEYKaA8i8PQB570XZl5Dw:1632890920796&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjXu6nasKPzAhUxkmoFHSWyA1MQ_AUoAXoECAEQAw&biw=1280&bih=577&dpr=1.5")
     )
     images = soup.find_all("img")
     t = [{"src": image.get("src"), "alt": image.get("alt")} for image in images]
@@ -37,7 +37,7 @@ def transparencia_uanl():
         print(f"{t}")
 
 
-def fernanda():
+def  uriel ():
     codigo = (
         "mx"  # str(input("introduzca el codigo del pais que desea conocer la Hora: "))
     )
@@ -54,4 +54,4 @@ def fernanda():
 
 
 if __name__ == "__main__":
-    fernanda()
+    uriel ()
