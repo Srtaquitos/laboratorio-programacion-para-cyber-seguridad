@@ -1,0 +1,61 @@
+ipconfig [/allcompartments] [/? | /all |
+                                /renew [adaptador] | /release [adaptador] |
+                                /renew6 [adaptador] | |
+                                 /release6 [adaptador] |
+                                /flushdns | /displaydns | /registerdns |
+                                /showclassid adaptador |
+                                /setclassid adaptador [id._clase] |
+                                /showclassid6 adaptador |
+                                /setclassid6 adaptador [id._clase] ]
+
+donde
+   adaptador           Nombre de conexión
+                      (se permiten los caracteres comodín * y ?; consulte los
+                       ejemplos)
+
+    Opciones:
+      /?               Muestra este mensaje de ayuda.
+      /all             Muestra toda la información de configuración.
+      /release         Libera la dirección IPv4 para el adaptador especificado.
+      /release6        Libera la dirección IPv6 para el adaptador especificado.
+      /renew           Renueva la dirección IPv4 para el adaptador
+                       especificado.
+      /renew6          Renueva la dirección IPv6 para el adaptador
+                       especificado.
+      /flushdns        Purga la memoria caché de resolución de DNS.
+      /registerdns     Actualiza todas las concesiones DHCP y vuelve a
+                       registrar los nombres DNS.
+      /displaydns      Muestra el contenido de la memoria caché de resolución
+                       de DNS.
+      /showclassid     Muestra todos los id. de clase DHCP permitidos para
+                       este adaptador.
+      /setclassid      Modifica el id. de clase DHCP.
+      /showclassid6    Muestra todos los id. de clase DHCP IPv6 permitidos para
+                       el adaptador.
+      /setclassid6     Modifica el id. de clase DHCP IPv6.
+
+
+De forma predeterminada, se muestra solamente la dirección IP, la máscara de
+subred y la puerta de enlace predeterminada para cada adaptador enlazado con
+TCP/IP.
+
+Para Release y Renew, si no hay ningún nombre de adaptador especificado, se
+liberan o renuevan las concesiones de dirección IP para todos los adaptadores
+enlazados con TCP/IP.
+
+Para Setclassid y Setclassid6, si no especificó classid, se quita.
+
+Ejemplos:
+    > ipconfig                       ... Muestra información.
+    > ipconfig /all                  ... Muestra información detallada.
+    > ipconfig /renew                ... Renueva todos los adaptadores.
+    > ipconfig /renew EL*            ... Renueva cualquier conexión cuyo nombre
+                                         comience con EL.
+    > ipconfig /release *Con*        ... Libera todas las conexiones
+                                         coincidentes, por ejemplo:
+                                             "Conexión cableada Ethernet 1" o
+                                             "Conexión cableada Ethernet 2".
+    > ipconfig /allcompartments      ... Muestra información sobre todos
+                                         los compartimientos.
+    > ipconfig /allcompartments /all ... Muestra información detallada sobre
+                                         todos los compartimientos
