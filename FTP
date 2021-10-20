@@ -1,0 +1,23 @@
+from ftplib import FTP_TLS
+ftps = FTP_TLS('ftp.python.org')
+ftps.login()           # ingresar como anónimo
+ftps.prot_p()          # cambiar a conexión segura
+ftps.retrlines('LIST')
+ftps.quit()
+from ftplib import FTP
+class XFTP(FTP):
+    """API de alto nivel para cargar y descargar archivos
+       vía FTP"""
+    
+    def upload(self, filename, callback=None):
+        with open(filename, "rb") as f:
+            self.storbinary("STOR " + filename, f, callback=callback)
+    def download(self, filename, callback=None):
+        cmd = "RETR " + filename
+        if callback is None:
+            # Usar la callback por defecto
+            with open(filename, "wb") as f:
+                self.retrbinary(cmd, f.write)
+        else:
+            # Callback del usuario
+            self.retrbinary(cmd, callback)
