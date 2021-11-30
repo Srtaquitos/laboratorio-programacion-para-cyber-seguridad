@@ -1,0 +1,12 @@
+C:\Users\admin>ipconfig /displaydns
+
+Configuración IP de Windows
+
+    www.gstatic.com
+    ----------------------------------------
+    Nombre de registro  . : www.gstatic.com
+    Tipo de registro  . . : 28
+    Período de vida . . . : 74
+    Longitud de datos . . : 16
+    Sección . . . . . . . : respuesta
+    Registro AAAA . . . . : 2607:f8b0:4012:81b::2003
