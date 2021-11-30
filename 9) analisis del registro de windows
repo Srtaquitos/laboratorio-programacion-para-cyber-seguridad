@@ -1,0 +1,7 @@
+# laboratorio-programacion-para-cyber-seguridad
+rip.pl -r SYSTEM -f system
+default: MS Windows registry file, NT/2000 or above
+SAM: MS Windows registry file, NT/2000 or above
+SECURITY: MS Windows registry file, NT/2000 or above
+SOFTWARE:  MS Windows registry file, NT/2000 or above
+SYSTEM: MS Windows registry file, NT/2000 or above
